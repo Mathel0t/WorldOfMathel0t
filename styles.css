@@ -4,8 +4,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #ad30ad85;
+    color: #6d3b6e;
   }
   
   h1 {
@@ -36,8 +36,8 @@ header {
   }
   
   a {
-    background-color: #333;
-    color: #fff;
+    background-color: #3596bd;
+    color: #181515;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -45,6 +45,6 @@ header {
   }
   
   a:hover {
-    background-color: #555;
+    background-color: #222e29;
   }
   
