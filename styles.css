@@ -1,0 +1,50 @@
+/* Ajoutez ici vos styles CSS */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  p {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  a {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  a:hover {
+    background-color: #555;
+  }
+  
