@@ -15,6 +15,7 @@
 }
 
 body {
+  margin: 0 200px;
   background-color: var(--couleur-fond);
   color: var(--couleur-texte);
   font-family: 'Chakra', sans-serif;
@@ -40,8 +41,14 @@ h2 {
 }
 
 img {
-  width: 1080px;
-  height: 720px;
+  width: 854px;
+  height: 480px;
+  border-radius: 0%;
+}
+
+.image2 {
+  width: 828px;
+  height: 1169px;
   border-radius: 0%;
 }
 
@@ -66,6 +73,32 @@ p {
   font-size: 20px;
   text-align: center;
   margin: 10px 0;
+}
+
+button {
+  background-color: #266DD3;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.reseaux-sociaux {
+  margin: 20px;
+  text-align: center;
+}
+
+.icones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icones a img {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
 }
 
 a {

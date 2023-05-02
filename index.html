@@ -12,29 +12,85 @@
 	</header>
 	<main>
 		<h2>Mes Projets</h2>
-		<section>
+		
+		<div class="boutons">
+			<button id="btn_acceuil">ACCEUIL</button>
+			<button id="btn_projet">PROJETS</button>
+			<button id="btn_reseaux">À PROPOS</button>
+		</div>
+		
+
+		<section id="section_acceuil">
+			<img src="IMG/me_gusta.png" alt="fearless le jeu">
+			
+			<p>Salut les amis c'est mathieu sicuranza et tu regardes disney channel!</p>
+			
+		</section>
+		
+		<section id="section_projet">
 			<img src="IMG\fearless01.jpg" alt="fearless le jeu">
 			<h3>Fearless</h3>
 			<p>Jo, une adolescente très anxieuse doit surveiller son petit frère, Charlie, mais qui s'enfui de la maison.</p>
 			<p>Elle va devoir mener une grande lutte interne et vaincre ses démons pour retrouver son petit frère.</p>
 			<p>Basculer de la réalité au monde imaginaire afin de vaincre vos phobies ! </p>
 			<a href="https://mathelot.itch.io/fearless">J'affronte mes peur !</a>
-		</section>
-		<section>
+			<hr>
 			<img src="IMG\05.png" alt="ceci n'est pas une simulation">
 			<h3>D-R3@M</h3>
 			<p>Vous vous réveillez dans une décharge abandonné, il fait nuit sombre, la pluie tombe, vous devrez avancer dans cette ville mystérieuse mais qui vous est hostile. </p>
 			<a href="https://mathelot.itch.io/d-ream">J0u3r à D-R3@M</a>
-		</section>
-		<section>
+			<hr>
 			<img src="IMG\neon01.jpg" alt="neon kiraaaaa">
 			<h3>Neon Killers</h3>
 			<p>Un runner arcade haut en couleur et en néons ! Parcourez les niveaux de Neon Killers tout en récupérant le max de NeonCoins pour débloquer encore plus de NeonPower !</p>
 			<a href="https://www.artstation.com/artwork/aoYR3L">Plonger dans un monde de néons</a>
 		</section>
+		
+		<section id="section_reseaux">
+			
+				<h2>Mes Réseaux Sociaux</h2>
+				<div class="icones">
+				  <a href="https://www.linkedin.com/"><img src="IMG/trinite.png" alt="LinkedIn"></a>
+				  <a href="https://www.twitter.com/"><img src="IMG/trinite.png" alt="Twitter"></a>
+				  <a href="https://www.instagram.com/"><img src="IMG/trinite.png" alt="Instagram"></a>
+				  <a href="https://www.facebook.com/"><img src="IMG/trinite.png" alt="Facebook"></a>
+				  <img class="image2" src="IMG/CV-MATHIEU2.0.png" alt="neon kiraaaaa">
+				</div>
+			  
+		</section>
 	</main>
 	<footer>
 		<p>© 2023 Mon Portfolio</p>
 	</footer>
+	
+	<script>
+		// on cache les sections projets et Réseaux
+		document.getElementById("section_projet").style.display = "none";
+		document.getElementById("section_reseaux").style.display = "none";
+		
+		// lorsqu'on clique sur le bouton "acceuil"
+		document.getElementById("btn_acceuil").onclick = function() {
+			// on affiche la section Projets et on cache les autres
+			document.getElementById("section_acceuil").style.display = "block";
+			document.getElementById("section_projet").style.display = "none";
+			document.getElementById("section_reseaux").style.display = "none";
+		};
+		
+		// lorsqu'on clique sur le bouton "projets"
+		document.getElementById("btn_projet").onclick = function() {
+			// on affiche la section CV et on cache les autres
+			document.getElementById("section_acceuil").style.display = "none";
+			document.getElementById("section_projet").style.display = "block";
+			document.getElementById("section_reseaux").style.display = "none";
+		};
+		
+		// lorsqu'on clique sur le bouton "Réseaux"
+		document.getElementById("btn_reseaux").onclick = function() {
+			// on affiche la section Réseaux et on cache les autres
+			document.getElementById("section_acceuil").style.display = "none";
+			document.getElementById("section_projet").style.display = "none";
+			document.getElementById("section_reseaux").style.display = "block";
+		};
+	</script>
 </body>
 </html>
