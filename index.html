@@ -1,49 +1,93 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Mon Portfolio</title>
 	<link rel="stylesheet" href="styles.css">
-</head>
+	<script src="fichierjava.js"></script>
+	<style>
+		.project-item {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			grid-gap: 20px;
+			align-items: center;
+		}
+
+		.main-image {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.thumbnail-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 10px;
+		}
+
+		.thumbnail {
+			max-width: 100%;
+			height: auto;
+		}
+		
+	</style>
+	</head>
 <body>
 	<header>
 		<h1>Mon Portfolio</h1>
 		<img class="image1" src="IMG/nooknook.jpg" alt="Ma photo" width="10" height="10">
-	</header>
-	<main>
-		<h2>Mes Projets</h2>
-		
-		<div class="boutons">
-			<button id="btn_acceuil">ACCEUIL</button>
-			<button id="btn_projet">PROJETS</button>
-			<button id="btn_reseaux">À PROPOS</button>
-		</div>
-		
 
+		
+	</header>
+	<ul>
+		<li style="--i:3;"><button id="btn_acceuil">ACCEUIL</button></li>
+		<li style="--i:2;"><button id="btn_projet">PROJETS</button></li>
+		<li style="--i:1;"><button id="btn_reseaux">À PROPOS</button></li>
+	</ul>
+	<main>
 		<section id="section_acceuil">
-			<img src="IMG/me_gusta.png" alt="fearless le jeu">
-			
-			<p>Salut les amis c'est mathieu sicuranza et tu regardes disney channel!</p>
-			
+			<h2>ACCEUIL</h2>
+
+			<p>Salut les amis c'est Mathieu Sicuranza et tu regardes Disney Channel!</p>
+			<img src="IMG/trinite.png" alt="fearless le jeu">
 		</section>
 		
 		<section id="section_projet">
-			<img src="IMG\fearless01.jpg" alt="fearless le jeu">
-			<h3>Fearless</h3>
-			<p>Jo, une adolescente très anxieuse doit surveiller son petit frère, Charlie, mais qui s'enfui de la maison.</p>
-			<p>Elle va devoir mener une grande lutte interne et vaincre ses démons pour retrouver son petit frère.</p>
-			<p>Basculer de la réalité au monde imaginaire afin de vaincre vos phobies ! </p>
-			<a href="https://mathelot.itch.io/fearless">J'affronte mes peur !</a>
-			<hr>
-			<img src="IMG\05.png" alt="ceci n'est pas une simulation">
-			<h3>D-R3@M</h3>
-			<p>Vous vous réveillez dans une décharge abandonné, il fait nuit sombre, la pluie tombe, vous devrez avancer dans cette ville mystérieuse mais qui vous est hostile. </p>
-			<a href="https://mathelot.itch.io/d-ream">J0u3r à D-R3@M</a>
-			<hr>
-			<img src="IMG\neon01.jpg" alt="neon kiraaaaa">
-			<h3>Neon Killers</h3>
-			<p>Un runner arcade haut en couleur et en néons ! Parcourez les niveaux de Neon Killers tout en récupérant le max de NeonCoins pour débloquer encore plus de NeonPower !</p>
-			<a href="https://www.artstation.com/artwork/aoYR3L">Plonger dans un monde de néons</a>
+			<h2>Mes Projets</h2>
+			<div class="project-item">
+				
+				<img class="img main-image" src="IMG\fearless01.jpg" alt="fearless le jeu">
+				<div class="thumbnail-container">
+					<img src="IMG\fearless02.jpg" alt="miniature" class="thumbnail">
+				</div>
+				<h3>Fearless</h3>
+				<p>Jo, une adolescente très anxieuse doit surveiller son petit frère.</p>
+				<p>Basculer de la réalité au monde imaginaire afin de vaincre vos phobies ! </p>
+				<a href="https://mathelot.itch.io/fearless">J'affronte mes peur !</a>
+			</div>
+			
+			<div class="project-item">
+				<img class="img main-image" src="IMG\05.png" alt="ceci n'est pas une simulation">
+				<div class="thumbnail-container">
+					<img src="IMG\02.png" alt="miniature" class="thumbnail">
+					<img src="IMG\01.png" alt="miniature" class="thumbnail">
+					<img src="IMG\04.png" alt="miniature" class="thumbnail">
+				</div>
+				<h3>D-R3@M</h3>
+				<p>Vous vous réveillez dans une décharge abandonné, il fait nuit sombre, la pluie tombe, vous devrez avancer dans cette ville mystérieuse mais qui vous est hostile. </p>
+				<a href="https://mathelot.itch.io/d-ream">J0u3r à D-R3@M</a>
+			</div>
+			
+			<div class="project-item">
+				<img class="img main-image" src="IMG\neon01.jpg" alt="neon kiraaaaa">
+				<div class="thumbnail-container">
+					<img src="IMG\neon02.jpg" alt="miniature" class="thumbnail">
+					<img src="IMG\neon03.jpg" alt="miniature" class="thumbnail">
+					<img src="IMG\neon04.jpg" alt="miniature" class="thumbnail">
+				</div>
+				<h3>Neon Killers</h3>
+				<p>Un runner arcade haut en couleur et en néons ! Parcourez les niveaux de Neon Killers tout en récupérant le max de NeonCoins pour débloquer encore plus de NeonPower !</p>
+				<a href="https://mathelot.itch.io/neonkiller">Entrez dans ce monde de néons !</a>
 		</section>
 		
 		<section id="section_reseaux">
@@ -58,6 +102,7 @@
 				</div>
 			  
 		</section>
+		
 	</main>
 	<footer>
 		<p>© 2023 Mon Portfolio</p>
@@ -94,3 +139,4 @@
 	</script>
 </body>
 </html>
+
