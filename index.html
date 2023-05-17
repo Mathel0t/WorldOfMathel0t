@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Mon Portfolio</title>
 	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script src="fichierjava.js"></script>
 	<style>
 		.project-item {
@@ -27,91 +27,183 @@
 
 		.thumbnail {
 			max-width: 100%;
-			height: auto;
+			height: 200px;
+			width: 450px;
 		}
 		
 	</style>
 	</head>
 <body>
 	<header>
-		<h1>Mon Portfolio</h1>
+		<div>
+			<h1>Mathieu Sicuranza</h1>
+			<h2>Tech Artist and programmer</h2>
+		</div>
+		
 		<img class="image1" src="IMG/nooknook.jpg" alt="Ma photo" width="10" height="10">
 
 		
 	</header>
-	<ul>
-		<li style="--i:3;"><button id="btn_acceuil">ACCEUIL</button></li>
-		<li style="--i:2;"><button id="btn_projet">PROJETS</button></li>
-		<li style="--i:1;"><button id="btn_reseaux">À PROPOS</button></li>
-	</ul>
+	
 	<main>
+		<ul class="boutons">
+			<li style="--i:4;--clr:#3e5291;"><button id="btn_acceuil">ACCEUIL</button></li>
+			<li style="--i:3;--clr:#3e5291;"><button id="btn_projet">PROJETS</button></li>
+			<li style="--i:2;--clr:#3e5291;"><button id="btn_reseaux">MES RÉSEAUX</button></li>
+			<li style="--i:1;--clr:#3e5291;"><button id="btn_CV">À PROPOS</button></li>
+		</ul>
 		<section id="section_acceuil">
 			<h2>ACCEUIL</h2>
 
-			<p>Salut les amis c'est Mathieu Sicuranza et tu regardes Disney Channel!</p>
-			<img src="IMG/trinite.png" alt="fearless le jeu">
+			<p>Salut les amis c'est Mathieu Sicuranza j'adore les spaghetti et les jeux vidéos !</p>
+			<img src="IMG/ywcgif.gif" alt="fearless le jeu">
 		</section>
 		
 		<section id="section_projet">
 			<h2>Mes Projets</h2>
-			<div class="project-item">
+			<div class="boutons">
+				<button id="btn_projet1"class="projet-button">UNFEAR</button>
+				<button id="btn_projet2" class="projet-button">D-R34M</button>
+				<button id="btn_projet3" class="projet-button">Neon Killers</button>
+			  </div>
+			<div class="projet" id="unfear">
 				
 				<img class="img main-image" src="IMG\fearless01.jpg" alt="fearless le jeu">
 				<div class="thumbnail-container">
-					<img src="IMG\fearless02.jpg" alt="miniature" class="thumbnail">
+				<img src="IMG\fearless02.jpg" alt="miniature" class="thumbnail">
+				<button class="prev-arrow" onclick="showPreviousImage()">&#8249;</button>
+    			<button class="next-arrow" onclick="showNextImage()">&#8250;</button>
 				</div>
-				<h3>Fearless</h3>
+				
+				<h3>Unfear</h3>
 				<p>Jo, une adolescente très anxieuse doit surveiller son petit frère.</p>
 				<p>Basculer de la réalité au monde imaginaire afin de vaincre vos phobies ! </p>
 				<a href="https://mathelot.itch.io/fearless">J'affronte mes peur !</a>
 			</div>
 			
-			<div class="project-item">
+			<div class="projet" id="dream">
 				<img class="img main-image" src="IMG\05.png" alt="ceci n'est pas une simulation">
 				<div class="thumbnail-container">
 					<img src="IMG\02.png" alt="miniature" class="thumbnail">
 					<img src="IMG\01.png" alt="miniature" class="thumbnail">
 					<img src="IMG\04.png" alt="miniature" class="thumbnail">
+					<button class="prev-arrow" onclick="showPreviousImage()">&#8249;</button>
+    			<button class="next-arrow" onclick="showNextImage()">&#8250;</button>
 				</div>
-				<h3>D-R3@M</h3>
+				<h3>D-R34M</h3>
 				<p>Vous vous réveillez dans une décharge abandonné, il fait nuit sombre, la pluie tombe, vous devrez avancer dans cette ville mystérieuse mais qui vous est hostile. </p>
 				<a href="https://mathelot.itch.io/d-ream">J0u3r à D-R3@M</a>
 			</div>
 			
-			<div class="project-item">
+			<div class="projet" id="neonkiller">
 				<img class="img main-image" src="IMG\neon01.jpg" alt="neon kiraaaaa">
 				<div class="thumbnail-container">
 					<img src="IMG\neon02.jpg" alt="miniature" class="thumbnail">
 					<img src="IMG\neon03.jpg" alt="miniature" class="thumbnail">
 					<img src="IMG\neon04.jpg" alt="miniature" class="thumbnail">
+					<button class="prev-arrow" onclick="showPreviousImage()">&#8249;</button>
+    			<button class="next-arrow" onclick="showNextImage()">&#8250;</button>
 				</div>
 				<h3>Neon Killers</h3>
 				<p>Un runner arcade haut en couleur et en néons ! Parcourez les niveaux de Neon Killers tout en récupérant le max de NeonCoins pour débloquer encore plus de NeonPower !</p>
 				<a href="https://mathelot.itch.io/neonkiller">Entrez dans ce monde de néons !</a>
+			</div>
 		</section>
 		
-		<section id="section_reseaux">
-			
+		<section id="section_reseaux" >
 				<h2>Mes Réseaux Sociaux</h2>
-				<div class="icones">
-				  <a href="https://www.linkedin.com/"><img src="IMG/trinite.png" alt="LinkedIn"></a>
-				  <a href="https://www.twitter.com/"><img src="IMG/trinite.png" alt="Twitter"></a>
-				  <a href="https://www.instagram.com/"><img src="IMG/trinite.png" alt="Instagram"></a>
-				  <a href="https://www.facebook.com/"><img src="IMG/trinite.png" alt="Facebook"></a>
-				  <img class="image2" src="IMG/CV-MATHIEU2.0.png" alt="neon kiraaaaa">
-				</div>
-			  
+				<ul class="icones-reseaux">
+					<li style="--i:8;--clr:#173050;"><p href="#"><span><i class="fab fa-artstation"></i></span>Artstation</p></li>
+					<li style="--i:7;--clr:#b418f2;"><p href="#"><span><i class="fab fa-instagram"></i></span>Instagram</p></li>
+					<li style="--i:6;--clr:#37a0c0;"><p href="#"><span><i class="fab fa-twitter"></i></span>Twitter</p></li>
+					<li style="--i:5;--clr:#1e67c7;"><p href="#"><span><i class="fab fa-linkedin-in"></i></span>LinkedIn</p></li>
+				</ul>
+				
+				<p1>N'hesitez pas à continuer l'exploration en 
+					venant me suivres sur mes réseaux !!</p1>
+				
+				
 		</section>
+				
+			  
 		
+
+		<section id="CV">
+			<img class="image2" src="IMG/CV-MATHIEU2.0.png" alt="neon kiraaaaa">
+		</section>
+
 	</main>
 	<footer>
 		<p>© 2023 Mon Portfolio</p>
 	</footer>
 	
 	<script>
+		let currentImageIndex = 0;
+
+// Obtenez toutes les images miniatures
+const thumbnailImages = document.querySelectorAll('.thumbnail-container img');
+
+// Définissez une fonction pour afficher l'image suivante
+function showNextImage() {
+    currentImageIndex = (currentImageIndex + 1) % thumbnailImages.length;
+    updateMainImage();
+}
+
+// Définissez une fonction pour afficher l'image précédente
+function showPreviousImage() {
+    currentImageIndex = (currentImageIndex - 1 + thumbnailImages.length) % thumbnailImages.length;
+    updateMainImage();
+}
+
+// Définissez une fonction pour mettre à jour l'image principale
+function updateMainImage() {
+    const mainImage = document.querySelector('.main-image');
+    const selectedThumbnail = thumbnailImages[currentImageIndex];
+    mainImage.src = selectedThumbnail.src;
+}
+
+// Appelez la fonction updateMainImage() pour afficher l'image initiale
+updateMainImage();
+
+		// Récupérer les boutons de projet et les projets
+const btnProjet1 = document.getElementById('btn_projet1');
+const btnProjet2 = document.getElementById('btn_projet2');
+const btnProjet3 = document.getElementById('btn_projet3');
+const projet1 = document.getElementById('unfear');
+const projet2 = document.getElementById('dream');
+const projet3 = document.getElementById('neonkiller');
+
+// Cacher tous les projets au chargement de la page
+projet1.style.display = 'none';
+projet2.style.display = 'none';
+projet3.style.display = 'none';
+
+// Afficher le premier projet par défaut
+projet1.style.display = 'block';
+
+// Ajouter des écouteurs d'événements aux boutons de projet
+btnProjet1.addEventListener('click', function() {
+  projet1.style.display = 'block';
+  projet2.style.display = 'none';
+  projet3.style.display = 'none';
+});
+
+btnProjet2.addEventListener('click', function() {
+  projet1.style.display = 'none';
+  projet2.style.display = 'block';
+  projet3.style.display = 'none';
+});
+
+btnProjet3.addEventListener('click', function() {
+  projet1.style.display = 'none';
+  projet2.style.display = 'none';
+  projet3.style.display = 'block';
+});
+
 		// on cache les sections projets et Réseaux
 		document.getElementById("section_projet").style.display = "none";
 		document.getElementById("section_reseaux").style.display = "none";
+		document.getElementById("CV").style.display = "none";
 		
 		// lorsqu'on clique sur le bouton "acceuil"
 		document.getElementById("btn_acceuil").onclick = function() {
@@ -119,6 +211,7 @@
 			document.getElementById("section_acceuil").style.display = "block";
 			document.getElementById("section_projet").style.display = "none";
 			document.getElementById("section_reseaux").style.display = "none";
+			document.getElementById("CV").style.display = "none";
 		};
 		
 		// lorsqu'on clique sur le bouton "projets"
@@ -127,6 +220,7 @@
 			document.getElementById("section_acceuil").style.display = "none";
 			document.getElementById("section_projet").style.display = "block";
 			document.getElementById("section_reseaux").style.display = "none";
+			document.getElementById("CV").style.display = "none";
 		};
 		
 		// lorsqu'on clique sur le bouton "Réseaux"
@@ -135,8 +229,22 @@
 			document.getElementById("section_acceuil").style.display = "none";
 			document.getElementById("section_projet").style.display = "none";
 			document.getElementById("section_reseaux").style.display = "block";
+			document.getElementById("CV").style.display = "none";
+		};
+		
+
+		document.getElementById("btn_CV").onclick = function() {
+			// on affiche la section Réseaux et on cache les autres
+			document.getElementById("section_acceuil").style.display = "none";
+			document.getElementById("section_projet").style.display = "none";
+			document.getElementById("section_reseaux").style.display = "none";
+			document.getElementById("CV").style.display = "block";
 		};
 	</script>
+	<script>
+
+</script>
 </body>
+
 </html>
 

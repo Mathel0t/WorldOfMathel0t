@@ -1,8 +1,8 @@
 :root {
-  --couleur-fond: #344055;
+  --couleur-fond: #29223a;
   --couleur-texte: #DFC2F2;
   --couleur-liens: #266DD3;
-  --couleur-header: #888098;
+  --couleur-header: #8e79b4;
 }
 
 @font-face {
@@ -24,24 +24,45 @@ body {
   font-family: 'y2k', sans-serif;
 }
 
-
+main {
+  display: grid;
+  grid-template-columns: 1fr 2frr;
+  grid-gap: 20px;
+  align-items: start;
+  justify-items: center;
+}
 
 header {
   display:flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 10px;
+  padding: 30px;
   background-color: var(--couleur-header);
   color: #fff;
-  margin-left: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 80px;
 }
 
 h1 {
   font-size: 84px;
+  margin-bottom: 0;
 }
 
 h2 {
-  font-size: 64px;
+  font-size: 30px;
+  align-self: left;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-size: 50px;
+  margin-top: 10px;
+}
+h4 {
+  justify-content: center;
+  font-size: 20px;
+  margin-top: 190px;
 }
 
 img {
@@ -69,16 +90,16 @@ img {
 }
 
 section {
-  display: right;
+  grid-column: 2;
+  align-self: flex-start;
+  display: flow ;
   flex-direction: column;
-  align-items: center;
-  margin: 20px;
+  align-items: flex-start;
+  
+  
 }
 
-h3 {
-  font-size: 50px;
-  margin-top: 10px;
-}
+
 
 p {
   font-size: 20px;
@@ -86,21 +107,62 @@ p {
   margin: 10px 0;
 }
 
+p1 {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 50px;
+  margin-top: 620px;
+}
+
 button {
   font-family: 'y2k', sans-serif ;
   background-color: #266ed300;
-  color: #cc99ce;
+  color: #d6a0d8;
   border: none;
-  padding: 30px 40px;
+  padding: 10px 30px;
   border-radius: 0px;
-  font-size: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  align-items: center;
+}
+button:hover {
+  font-family: 'y2k', sans-serif ;
+  background-color: #266ed300;
+  color: #f8f3f8;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 0px;
+  font-size: 20px;
   cursor: pointer;
   align-items: center;
 }
 
+.section-reseaux {
+  display: none;
+  margin-left: 0; /* Ajoutez cette ligne pour réinitialiser la marge */
+}
+
+.projet {
+  margin-bottom: 40px;
+}
+
+.projet h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.projet p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.projet a {
+  font-size: 18px;
+}
+
 .reseaux-sociaux {
   margin: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .icones {
@@ -139,20 +201,22 @@ a:hover {
   cursor: pointer;
 }
 
-
-
 ul
 {
+  grid-column: 1;
+  grid-row: 1/span 3;
   position: relative;
   transform: skewY(-15deg);
-  margin-bottom: 300px;
-  margin-left: 20px;
+  margin-bottom: 100px;
+  margin-left: 70px;
+ 
+  
 }
 ul li
 {
   position: relative;
   list-style: none;
-  width: 300px;
+  width: 200px;
   background: #16203f;
   padding: 15px;
   z-index: var(--i);
@@ -161,7 +225,7 @@ ul li
 
 ul li:hover
 {
-  background: #304586;
+  background: var(--clr);
   transform: translateX(-50px);
 }
 
@@ -223,3 +287,33 @@ ul li:last-child::after
 {
   box-shadow: -230px 250px 20px rgba(0,0,0,0.25);
 }
+
+/* Styles pour le bouton ArtStation */
+.bouton-artstation {
+  background-color: #001f3f; /* Bleu foncé */
+  color: #fff; /* Texte en blanc */
+}
+
+/* Styles pour le bouton Instagram */
+.bouton-instagram {
+  background-color: #8a2be2; /* Violet */
+  color: #fff; /* Texte en blanc */
+}
+
+/* Styles pour le bouton Twitter */
+.bouton-twitter {
+  background-color: #00ffff; /* Bleu lagon */
+  color: #000; /* Texte en noir */
+}
+
+/* Styles pour le bouton LinkedIn */
+.bouton-linkedin {
+  background-color: #00bcd4; /* Bleu cyan */
+  color: #fff; /* Texte en blanc */
+}
+
+
+
+
+
+
