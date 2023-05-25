@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Mon Portfolio</title>
 	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script src="fichierjava.js"></script>
 	<style>
 		.project-item {
@@ -34,26 +34,29 @@
 	</style>
 	</head>
 <body>
-	<header>
-		<div>
-			<h1>Mathieu Sicuranza</h1>
-			<h2>Tech Artist and programmer</h2>
-		</div>
-		
-		<img class="image1" src="IMG/nooknook.jpg" alt="Ma photo" width="10" height="10">
 
+		<section class="parallax">
+            
+            <img src="IMG/hill1.png" id="hill1">
+            <img src="IMG/hill2.png" id="hill2">
+            <img src="IMG/hill3.png" id="hill3"><h1 id="text">World Of Mathelot</h1>
+            <img src="IMG/hill4.png" id="hill4">
+			
+        </section>
 		
-	</header>
+	
 	
 	<main>
-		<ul class="boutons">
-			<li style="--i:4;--clr:#3e5291;"><button id="btn_acceuil">ACCEUIL</button></li>
+		<div id="sidebar">
+		<ul class="boutons principal">
+			<li style="--i:4;--clr:#3e5291;"><button id="btn_acceuil">ACCUEIL</button></li>
 			<li style="--i:3;--clr:#3e5291;"><button id="btn_projet">PROJETS</button></li>
 			<li style="--i:2;--clr:#3e5291;"><button id="btn_reseaux">MES RÉSEAUX</button></li>
 			<li style="--i:1;--clr:#3e5291;"><button id="btn_CV">À PROPOS</button></li>
 		</ul>
+		</div>
 		<section id="section_acceuil">
-			<h2>ACCEUIL</h2>
+			<h2>ACCUEIL</h2>
 
 			<p>Salut les amis c'est Mathieu Sicuranza j'adore les spaghetti et les jeux vidéos !</p>
 			<img src="IMG/ywcgif.gif" alt="fearless le jeu">
@@ -62,25 +65,70 @@
 		<section id="section_projet">
 			<h2>Mes Projets</h2>
 			<div class="boutons">
-				<button id="btn_projet1"class="projet-button">UNFEAR</button>
-				<button id="btn_projet2" class="projet-button">D-R34M</button>
-				<button id="btn_projet3" class="projet-button">Neon Killers</button>
-			  </div>
-			<div class="projet" id="unfear">
-				
-				<img class="img main-image" src="IMG\fearless01.jpg" alt="fearless le jeu">
-				<div class="thumbnail-container">
-				<img src="IMG\fearless02.jpg" alt="miniature" class="thumbnail">
-				<button class="prev-arrow" onclick="showPreviousImage()">&#8249;</button>
-    			<button class="next-arrow" onclick="showNextImage()">&#8250;</button>
-				</div>
-				
-				<h3>Unfear</h3>
-				<p>Jo, une adolescente très anxieuse doit surveiller son petit frère.</p>
-				<p>Basculer de la réalité au monde imaginaire afin de vaincre vos phobies ! </p>
-				<a href="https://mathelot.itch.io/fearless">J'affronte mes peur !</a>
+				<ul class="boutons effect01">
+					<li style="--clr:#537972;">
+					  <a href="#" class="special-link" id="btn_projet1">
+						<i class="fa-solid fa-gamepad"></i>
+						<span>UNFEAR</span>
+					  </a>
+					</li>
+					<li style="--clr:#500c77;">
+					  <a href="#" class="special-link" id="btn_projet2">
+						<i class="fa-solid fa-gamepad"></i>
+						<span>D-R34M</span>
+					  </a>
+					</li>
+					<li style="--clr:#ff00c8;">
+					  <a href="#" class="special-link" id="btn_projet3">
+						<i class="fa-solid fa-gamepad"></i>
+						<span>Neon Killers</span>
+					  </a>
+					</li>
+				  </ul>
+				  
 			</div>
+			<div class="projet" id="unfear">
+				<div class="slider">
+					
+				  <div class="slides">
+					<input type="radio" name="radio-btn" id="radio1">
+					<input type="radio" name="radio-btn" id="radio2">
+					<input type="radio" name="radio-btn" id="radio3">
+					<input type="radio" name="radio-btn" id="radio4">
+			  
+					<div class="slide first">
+					  <img src="IMG/fearless01.jpg" alt="">
+					</div>
+					<div class="slide">
+					  <img src="IMG/fearless02.jpg" alt="">
+					</div>
+					<div class="slide">
+					  <img src="IMG/fearless03.png" alt="">
+					</div>
+					<div class="slide">
+					  <img src="IMG/fearless04.png" alt="">
+					</div>
+				  </div>
+			  
+				  <div class="navigation-auto">
+					<div class="auto-btn1"></div>
+					<div class="auto-btn2"></div>
+					<div class="auto-btn3"></div>
+					<div class="auto-btn4"></div>
+				  </div>
+				</div>
+			  <h1 class="title">UNFEAR</h1>
+				<div class="navigation-manual">
+				  <label for="radio1" class="manual-btn"></label>
+				  <label for="radio2" class="manual-btn"></label>
+				  <label for="radio3" class="manual-btn"></label>
+				  <label for="radio4" class="manual-btn"></label>
+				</div>
+			  </div>
+			  
+				
 			
+				
 			<div class="projet" id="dream">
 				<img class="img main-image" src="IMG\05.png" alt="ceci n'est pas une simulation">
 				<div class="thumbnail-container">
@@ -119,8 +167,8 @@
 					<li style="--i:5;--clr:#1e67c7;"><p href="#"><span><i class="fab fa-linkedin-in"></i></span>LinkedIn</p></li>
 				</ul>
 				
-				<p1>N'hesitez pas à continuer l'exploration en 
-					venant me suivres sur mes réseaux !!</p1>
+				<p>N'hesitez pas à continuer l'exploration en 
+					venant me suivres sur mes réseaux !!</p>
 				
 				
 		</section>
@@ -133,13 +181,60 @@
 		</section>
 
 	</main>
-	<footer>
-		<p>© 2023 Mon Portfolio</p>
-	</footer>
+	
 	
 	<script>
+		var counter = 1;
+					setInterval(function(){
+						document.getElementById('radio' + counter).checked =true;
+						counter++;
+						if(counter >4){
+							counter = 1;
+						}
+					},5000);
 		let currentImageIndex = 0;
 
+		let hill1 = document.getElementById('hill1');
+		let hill2 = document.getElementById('hill2');
+		let hill3 = document.getElementById('hill3');
+		let hill4 = document.getElementById('hill4');
+		let text = document.getElementById('text');
+
+		window.addEventListener('scroll', ()=> {
+			let value = window.scrollY;
+
+			text.style.marginTop = value * 2.5 + 'px';
+			hill2.style.left = value * -1.5 + 'px';
+			hill4.style.left = value * 1.5 +'px';
+		});
+		window.addEventListener('scroll', function() {
+			var text = document.getElementById('text');
+			var scrollPosition = window.pageYOffset;
+
+			// Modifiez les valeurs ci-dessous selon vos besoins
+			var fadeInStart = 50;  // Position de défilement où le fondu en opacité commence
+			var fadeInEnd = 200;  // Position de défilement où le fondu en opacité est terminé
+
+			if (scrollPosition >= fadeInStart && scrollPosition <= fadeInEnd) {
+				// Calcul de l'opacité en fonction de la position de défilement
+				var opacity = (scrollPosition - fadeInStart) / (fadeInEnd - fadeInStart);
+				text.style.opacity = opacity;
+			} else if (scrollPosition < fadeInStart) {
+				// Retour à l'opacité complète lorsque vous remontez
+				text.style.opacity = 1;
+			} else {
+				// Retour à l'opacité complète lorsque vous descendez au-delà de la plage de fondu en opacité
+				text.style.opacity = 0;
+			}
+		});
+
+var specialLinks = document.querySelectorAll("ul.effect01 li a.special-link");
+
+// Parcourir toutes les balises <a> spécifiques
+for (var i = 0; i < specialLinks.length; i++) {
+  var link = specialLinks[i];
+  // Faites quelque chose avec chaque balise <a> spécifique
+}
 // Obtenez toutes les images miniatures
 const thumbnailImages = document.querySelectorAll('.thumbnail-container img');
 
