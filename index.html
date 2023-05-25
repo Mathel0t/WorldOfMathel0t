@@ -43,7 +43,7 @@
             <img src="IMG/hill4.png" id="hill4">
 			
         </section>
-		
+		<section></section>
 	
 	
 	<main>
@@ -55,6 +55,7 @@
 			<li style="--i:1;--clr:#3e5291;"><button id="btn_CV">À PROPOS</button></li>
 		</ul>
 		</div>
+		<div id="content">
 		<section id="section_acceuil">
 			<h2>ACCUEIL</h2>
 
@@ -180,6 +181,8 @@
 			<img class="image2" src="IMG/CV-MATHIEU2.0.png" alt="neon kiraaaaa">
 		</section>
 
+	</div>
+
 	</main>
 	
 	
@@ -193,6 +196,22 @@
 						}
 					},5000);
 		let currentImageIndex = 0;
+
+			var sidebar = document.getElementById('sidebar');
+var content = document.getElementById('content');
+var windowHeight = window.innerHeight;
+
+window.addEventListener('scroll', function() {
+  var contentTop = content.offsetTop;
+  var contentHeight = content.offsetHeight;
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > contentTop - windowHeight/2 && scrollTop < contentTop + contentHeight - windowHeight/2) {
+    sidebar.style.opacity = '1';
+  } else {
+    sidebar.style.opacity = '0';
+  }
+});
 
 		let hill1 = document.getElementById('hill1');
 		let hill2 = document.getElementById('hill2');

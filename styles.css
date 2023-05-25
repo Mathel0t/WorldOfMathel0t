@@ -100,7 +100,7 @@ section {
   flex-direction: column;
   align-items: flex-start;
   background-color: #131c25;
-  z-index: 100;
+  
 }
 
 
@@ -202,7 +202,7 @@ button:hover {
 
 
 .projet .box {
-  background-color: #fff;
+  background-color: #2fac9b;
   color: #000;
   padding: 10px;
   width: 200px;
@@ -250,7 +250,7 @@ button:hover {
 
 a {
   background-color: var(--couleur-liens);
-  color: #fff;
+  color: #ffffff;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
@@ -630,10 +630,16 @@ justify-content: center;
 
 #sidebar {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
-  width: 200px;  /* Ajustez la largeur selon vos besoins */
-  background-color: #f2f2f2;
+  margin-left: -5%;
+  width: 1000px;  /* Ajustez la largeur selon vos besoins */
   padding: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
 }
-
+#content {
+  margin-left: 320px; /* Assurez-vous d'ajuster cette valeur selon la largeur de votre barre latérale */
+}
